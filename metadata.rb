@@ -1,0 +1,7 @@
+name 'container_monitor'
+maintainer 'Aneudy Mota'
+maintainer_email 'aneudy.motacatalino@gmail.com'
+license 'all_rights'
+description 'Installs/Configures container_monitor'
+long_description 'Installs/Configures container_monitor'
+version '0.1.0'
