@@ -1,0 +1,41 @@
+object CheckCommand "http-service" {
+        import "plugin-check-command"
+        command = [ PluginDir + "/check_http" ]
+        arguments = {
+                "-I" = "127.0.0.1"
+                "-p" = "80"
+        }
+}
+
+object CheckCommand "mysql-service" {
+        import "plugin-check-command"
+        command = [ PluginDir + "/check_mysql" ]
+        arguments = {
+                "-H" = "127.0.0.1"
+                "-P" = "3306"
+                "-d" = "icinga"
+                "-u" = "root"
+                "-p" = "admin1234"
+        }
+}
+
+object CheckCommand "mysqld-container" {
+        import "plugin-check-command"
+        command = [ PluginDir + "/check_mysql" ]
+        arguments = {
+                "-H" = "127.0.0.1"
+                "-P" = "49222"
+                "-u" = "root"
+                "-p" = "admin1234"
+        }
+}
+
+object CheckCommand "httpd-container" {
+        import "plugin-check-command"
+        command = [ PluginDir + "/check_http" ]
+        arguments = {
+                "-I" = "127.0.0.1"
+                "-p" = "49111"
+        }
+}
+

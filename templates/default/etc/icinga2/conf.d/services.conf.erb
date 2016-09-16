@@ -1,0 +1,24 @@
+apply Service "httpd" {
+	import "generic-service"
+	check_command = "http-service"
+	assign where host.name == "this_host"
+}
+
+apply Service "mysqld" {
+        import "generic-service"
+        check_command = "mysql-service"
+        assign where host.name == "this_host"
+}
+
+apply Service "docker_mysqld" {
+	import "generic-service"
+	check_command = "mysqld-container"
+	assign where host.name == "this_host"
+}
+
+apply Service "docker_httpd" {
+	import "generic-service"
+	check_command = "httpd-container"
+	assign where host.name == "this_host"
+}
+

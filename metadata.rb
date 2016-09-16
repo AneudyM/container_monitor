@@ -5,3 +5,7 @@ license 'all_rights'
 description 'Installs/Configures container_monitor'
 long_description 'Installs/Configures container_monitor'
 version '0.1.0'
+
+depends 'apt', '~> 4.0.1'
+depends 'firewall', '~> 2.5.2'
+depends 'docker', '~> 2.9'
