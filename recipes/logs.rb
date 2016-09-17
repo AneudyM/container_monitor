@@ -20,10 +20,8 @@ cookbook_file "#{home_dir}/scripts/container_logs.sh" do
 end
 
 cron 'create_container_logs' do
-	#minute '59'
-	#hour '18'
-	minute '*'
-	hour '*'
+	minute '59'
+	hour '18'
 	day '*'
 	weekday '*'
 	command "#{home_dir}/scripts/container_logs.sh"
@@ -31,10 +29,8 @@ cron 'create_container_logs' do
 end
 
 cron 'send_httpd_logs_to_S3' do
-	#minute '00'
-	#hour '19'
-	minute '*'
-	hour '*'
+	minute '00'
+	hour '19'
 	day '*'
 	weekday '*'
 	command "s3cmd --config=/etc/s3cmd/.s3cfg sync #{home_dir}/archived s3://#{logsbucket}"
