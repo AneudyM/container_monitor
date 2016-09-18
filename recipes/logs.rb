@@ -33,7 +33,7 @@ cron 'send_httpd_logs_to_S3' do
 	hour '19'
 	day '*'
 	weekday '*'
-	command "s3cmd --config=#{home_dir}/etc/s3cmd/.s3cfg sync #{home_dir}/archived/ s3://#{logsbucket}"
+	command "s3cmd --config=#{home_dir}/etc/.s3cfg sync #{home_dir}/archived/ s3://#{logsbucket}"
 	action :create
 end
 
