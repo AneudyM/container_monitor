@@ -29,7 +29,7 @@ cron 'create_container_backups' do
 	hour '18'
 	day '*'
 	weekday '*'
-	command "#{home_dir}/container_backups.sh"
+	command "#{home_dir}/scripts/container_backups.sh"
 	action :create
 end
 

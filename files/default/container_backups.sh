@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Path to Apache and MySQL data directories
-HTTPD_DATA="/opt/container_monitor/www"
-MYSQLD_DATA="/opt/container_monitor/db"
+HTTPD_DATA="/opt/container_monitor/containers/www"
+MYSQLD_DATA="/opt/container_monitor/containers/db"
 
 # Store current date
 now=$(date +"%F")
