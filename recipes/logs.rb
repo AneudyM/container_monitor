@@ -20,7 +20,7 @@ cookbook_file "#{home_dir}/scripts/container_logs.sh" do
 end
 
 cron 'create_container_logs' do
-	minute '59'
+	minute '55'
 	hour '18'
 	day '*'
 	weekday '*'
@@ -28,7 +28,7 @@ cron 'create_container_logs' do
 	action :create
 end
 
-cron 'send_httpd_logs_to_S3' do
+cron 'send_logs_to_S3' do
 	minute '00'
 	hour '19'
 	day '*'

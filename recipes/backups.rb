@@ -25,7 +25,7 @@ end
 # Add cron entries for the periodical collection and transference of 
 # backups.
 cron 'create_container_backups' do
-	minute '59'
+	minute '55'
 	hour '18'
 	day '*'
 	weekday '*'

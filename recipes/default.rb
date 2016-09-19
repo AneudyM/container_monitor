@@ -5,7 +5,6 @@
 # Copyright (c) 2016 Aneudy Mota, All Rights Reserved.
 
 include_recipe 'container_monitor::repositories'
-include_recipe 'container_monitor::control'
 include_recipe 'container_monitor::ug_admin'
 include_recipe 'container_monitor::firewall'
 include_recipe 'container_monitor::structure'
