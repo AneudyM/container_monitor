@@ -31,7 +31,7 @@ time_from_file=$(cat ${config_dir}/${timeFile});
 # Get the logs from the containers
 $GETLOGS=${time_from_file} httpd-container > ${HTTPD_CONTAINER_LOGS}/${httpdOutLogFile} \
                                 2> ${HTTPD_CONTAINER_LOGS}/${httpdErrLogFile};
-cat ${HTTPD_CONTAINER_LOGS}/${httpdOutLogFile}
+
 $GETLOGS=${time_from_file} mysqld-container > ${MYSQLD_CONTAINER_LOGS}/${mysqldOutLogFile} \
                                 2> ${MYSQLD_CONTAINER_LOGS}/${mysqldErrLogFile}; 
 
